@@ -1,5 +1,8 @@
-# Environment variables (contains secrets)
+
+# Environment variables and secrets
 .env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
@@ -7,7 +10,16 @@ __pycache__/
 *$py.class
 *.so
 .Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Python virtual environments
+.venv/
+venv/
 env/
+
+# Python build artifacts
 build/
 develop-eggs/
 dist/
@@ -20,20 +32,25 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
-# Node / Frontend
+# Node.js and frontend
 node_modules/
 frontend/dist/
 frontend/dist-ssr/
 *.local
 
-# IDE / OS
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# IDE and operating system files
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
-.idea/
-.vscode/
 *.swp
 *.swo
